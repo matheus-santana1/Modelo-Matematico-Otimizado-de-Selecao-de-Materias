@@ -1,0 +1,58 @@
+// Arquivo: blendagem.dat
+
+// --- CONJUNTOS ---
+MateriasPrimas = { "Areia", "Bauxita", "Braunita", "Brucita", "Calcita", "Corindon", 
+                   "Dolomita", "Goethita", "Hematita", "Itabirito", "Magnesita", 
+                   "Magnetita", "Pirolusita", "Quartzo", "Rhodocrosita" };
+Elementos = { "SiO2", "CaO", "MgO", "Fe", "Al2O3", "Mn" };
+Pacotes = { 1, 2, 3, 4 }; // Exemplo com 4 pacotes
+
+// --- PARÂMETROS ---
+
+// Estoque de cada matéria-prima (em quilos)
+Estoque = [ 1000000, 1000000, 200000, 1000000, 500000, 1000000, 
+             500000, 3000000, 3000000, 3000000, 1000000, 3000000, 
+             1000000, 1000000, 300000 ];
+
+// Composição química (%) de cada elemento em cada matéria-prima
+// (Linhas: Matérias-Primas, Colunas: Elementos)
+ComposicaoQuimica = [
+    [95, 1, 1, 1, 1, 0],   // Areia
+    [10, 0, 0, 5, 50, 0],  // Bauxita
+    [11, 0, 0, 0, 0, 60],  // Braunita
+    [0, 0, 69, 0, 0, 0],   // Brucita
+    [5, 50, 5, 0, 0, 0],   // Calcita
+    [0, 0, 0, 0, 99, 0],   // Corindon
+    [0, 0, 30, 0, 22, 0],  // Dolomita
+    [0, 0, 0, 63, 0, 0],   // Goethita
+    [0, 0, 0, 70, 0, 0],   // Hematita
+    [10, 0, 5, 60, 5, 0],  // Itabirito
+    [0, 0, 48, 0, 0, 0],   // Magnesita
+    [0, 0, 0, 72, 0, 0],   // Magnetita
+    [0, 0, 0, 0, 0, 63],   // Pirolusita
+    [99, 0, 0, 0, 0, 0],   // Quartzo
+    [0, 0, 0, 0, 0, 47]    // Rhodocrosita
+];
+
+// Limites de concentração para cada elemento no sínter final (%)
+LimitesConcentracao = [
+    [4, 9],      // SiO2
+    [2, 8],      // CaO
+    [1, 3],      // MgO
+    [55, 65],    // Fe
+    [0.5, 2],    // Al2O3
+    [0.2, 2]     // Mn
+];
+
+// Limites de peso (em quilos)
+LIb = 100000;     // Limite inferior da balança
+LSb = 5000000;    // Limite superior da balança
+LIp = 3000000;    // Limite inferior do pacote
+LSp = 8500000;    // Limite superior do pacote
+
+// Limite máximo de tipos de matérias-primas por pacote
+MaxTiposPorPacote = 5;
+
+// Limite do desvio padrão por elemento
+//MaxDesvioPadrao = 0.02; // 2%
+
